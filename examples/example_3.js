@@ -18,15 +18,10 @@
 // console.log(doubledArray([1,,2]))
 
 //
-var doubledArray = function (arr,  newArray = []){
-    if (arr.length === 0) {
-        return newArray;
-    }
-    var number = arr.splice(0, 1);
-    if (number[0]) {
-      newArray.push(number * 2);
-    }
-    return doubledArray(arr, newArray);
+var doubledArray = function (arr,  newArray = []) {
+    let number = arr.splice(0, 1);
+    number[0] ? newArray.push(number * 2) : null;
+    return arr.length ? doubledArray(arr, newArray) : newArray;
 };
 
 console.log(doubledArray([1,-2,,5]))
