@@ -9,3 +9,5 @@ function splitter(word, seperator, start = 0, end = 0, splits = []) {
   }
   return splitter(word, seperator, start, end + 1, splits)
 }
+
+console.log(splitter("Split-Me--William", "-"));
