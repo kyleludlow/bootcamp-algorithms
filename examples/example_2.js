@@ -1,16 +1,11 @@
 // 2. reverse a string
 
-
-
-var reverseMe = function(string, arr){
-
-  if (string.length === 0){
-    return
+function revStr(str, index = -1, newString = "") {
+  if (newString.length === str.length) {
+      return newString;
   }
-
-  arr = arr || [];
-
-arr.push(string.slice(string.length -1, -1));
-
-  string.charAt(string.length)
+  newString += str.slice(index).charAt(0);
+  return revStr(str, index - 1, newString);
 }
+
+console.log(revStr('yvan eht nioj'));
