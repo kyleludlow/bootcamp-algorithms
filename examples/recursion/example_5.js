@@ -3,7 +3,7 @@ function blankCheck(word, start, end, splits) {
   if (str) splits.push(str);
 }
 
-function splitter(word, separator, start = 0, end = 0, splits = []) {
+function splitter(word, seperator, start = 0, end = 0, splits = []) {
   if (!separator) {
     separator = ' ';
   }
