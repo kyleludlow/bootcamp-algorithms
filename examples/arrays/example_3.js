@@ -8,17 +8,16 @@ function madMultiplyer(ary, result = [], pos = 0) {
   ary.forEach((item, i) => {
     if (i !== pos) toTimes.push(item);
   });
-  
+
   // I want to use reduce...but i guess that's cheating... :(
   // result.push(toTimes.reduce((x, y) => {
   //   return x * y;
   // }));
 
-  // Therefore : recursive solution courtasy of Mr Rory the Mentor.
+  // Therefore : recursive 'reducer' solution courtasy of Mr Rory the Mentor.
   result.push(reducer(toTimes));
   return result.length === ary.length ? result : madMultiplyer(ary, result, pos + 1);
 }
-
 
 function reducer(array) {
   let result = array[0];
