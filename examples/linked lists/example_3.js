@@ -1,3 +1,5 @@
+// Problem : Write an algorithm to reverse a linked list
+
 var LinkedList = require('./linkedlist');
 
 var list = new LinkedList();
@@ -17,7 +19,7 @@ function reverseList(list) {
     prev = current;
     current = next;
   }
-  console.log(list.head);
+  return list.head;
 }
 
-reverseList(list);
+console.log(reverseList(list));

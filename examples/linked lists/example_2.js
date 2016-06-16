@@ -1,3 +1,5 @@
+// Problem : Write an algorithm to find the third element from the end of a linked list
+
 var LinkedList = require('./linkedlist');
 
 var list = new LinkedList();

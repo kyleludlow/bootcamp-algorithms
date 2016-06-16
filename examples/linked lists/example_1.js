@@ -1,3 +1,7 @@
+// Problem: Write an algorithm to find the middle element of a linked list
+// TODO: implement Tortoise and Hare method.
+
+
 var LinkedList = require('./linkedlist');
 
 var list = new LinkedList();
