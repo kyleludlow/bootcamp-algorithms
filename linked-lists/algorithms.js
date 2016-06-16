@@ -69,7 +69,10 @@ santasList.insert(3,'unlimited EZ Pass');
 santasList.insert(4,'free gas for life');
 santasList.insert(5,'unlimited data');
 santasList.insert(6,'swag');
-santasList.insert(7,null);
+santasList.insert(7,'kazah');
+santasList.insert(8,'fwep');
+santasList.insert(9,'mehr');
+santasList.insert(10, null);
 
 // santasList.insert(6,null);
 
@@ -96,28 +99,27 @@ santasList.insert(7,null);
 // easier, softer way
 var findMiddle2 = function(list) {
 
-  var i = 1;
-  while (list._find(i -1).next !== null){
-    i++;
+  var i = 0;
+  var j = 0;
+
+  while (list._find(i).next !== null){
+    i+=2;
+    j+=1;
   }
-  middleLength = i / 2;
-  if ((middleLength | 0) === middleLength){
-    console.log(santasList.get(middleLength - 1), santasList.get(middleLength));
-  } else {
-    console.log(santasList.get(middleLength - 1));
-  }
+console.log(j);
+return list.get(j);
 };
 
 // x x x x x
 // 1 2 3 4 5 6 7 8 9 10
 // y   y   y   y   y    ?
-// findMiddle2(santasList);
+ console.log(findMiddle2(santasList));
 
 
 var thirdFromLast = function(list) {
 
   var i = 0;
-  while (list._find(i ).next !== null){
+  while (list._find(i).next !== null){
     i++;
   }
 
@@ -162,4 +164,4 @@ var newList = new LinkedList;
   return false;
 }
 
-console.log(doesItCycle(santasList));
+// console.log(doesItCycle(santasList));
