@@ -7,12 +7,12 @@ var LinkedList = require('./linkedlist');
 var list = new LinkedList();
 var cycleList = new LinkedList();
 
-for (let i = 0; i <= 3; i++) {
+for (let i = 0; i <= 5; i++) {
   list.insert(i, 'Norm ' + i);
   cycleList.insert(i, 'Cycles ' + i)
 }
 
-// have the last item in cycleList point back to the start
+// have the last item in cycleList point back to the start to creat a circular list
 let x = cycleList.head;
 while (x !== null) {
   if (x.next === null) {
@@ -23,16 +23,12 @@ while (x !== null) {
 }
 
 // solve problem
-function cycles(head) {
-  let firstValue = head.value;
-  while (head !== null) {
-    if (head.next && head.next.value === firstValue) {
-      return true;
+function cycles(head, firstVal = head.value) {
+    if (head.next === null) {
+      return false;
     }
-    head = head.next;
-  }
-  return false;
+    return head.next.value === firstVal ? true : cycles(head.next, firstVal);
 }
 
-console.log(cycles(cycleList.head));
-console.log(cycles(list.head));
+console.log(cycles(cycleList.head)); // true
+console.log(cycles(list.head)); // false
