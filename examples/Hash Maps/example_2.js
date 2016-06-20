@@ -34,4 +34,4 @@ function isAnnaGraham(array, toCheck = 0, keyArray = []) {
   }
 }
 
-console.log(isAnnaGraham(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']));
+console.log(isAnnaGraham(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race', 'cera', 'seats', 'aSets']));
