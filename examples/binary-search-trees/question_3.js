@@ -2,7 +2,7 @@ var BinarySearchTree = require('./tree');
 var util = require('util');
 
 function createData(...data) {
-  var result = []
+  var result = [];
   data.forEach(x => {
     let hash = null;
     x = x.toString();
@@ -18,7 +18,6 @@ function createData(...data) {
   return result;
 }
 
-// const data = createData("Jon", "Brandon", "Rickon", "Ned", "Caitlin", "Sansa", "Aria", "Rob");
 const data = createData(2,5,9,12,1,10,3,11,14,4,90,23,54,72,69);
 
 var Tree = new BinarySearchTree(data[0].key, data[0].value);
