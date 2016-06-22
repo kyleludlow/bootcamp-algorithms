@@ -5,15 +5,12 @@
 
 
 // Force it.....
-function eggDropper(increment, breaking) {
-  // let eggBreakage = Math.floor(Math.random() * 100) + 1;
-  console.log('increment: ' + increment)
-  console.log('breaking' + breaking)
-  let eggBreakage = breaking;
+function eggDropper() {
+  let eggBreakage = Math.floor(Math.random() * 100) + 1;
   let count = 0;
   let lower = 0;
   let higher = 10;
-  // let increment = increment;
+  let increment = 10;
   let flights = 10; // this is me being stupid...
 
   while (higher <= eggBreakage) { // till first egg breaks
@@ -29,8 +26,7 @@ function eggDropper(increment, breaking) {
     count++;
     flights++;
     if (lower === eggBreakage) {
-      return `
-The egg broke at floor ${eggBreakage} and therefore you can safely drop at floor ${lower - 1}.
+      return `The egg broke at floor ${eggBreakage} and therefore you can safely drop at floor ${lower - 1}.
 It took ${count} tries and you covered ${flights * 2} flights of stairs. That's about ${flights * 5} calories!
 `
     }
@@ -38,8 +34,4 @@ It took ${count} tries and you covered ${flights * 2} flights of stairs. That's 
   }
 }
 
-let value = Math.floor(Math.random() * 100) + 1;
-let value2 = value;
-
-console.log(eggDropper(1, value));
-console.log(eggDropper(9, value2));
+console.log(eggDropper());
