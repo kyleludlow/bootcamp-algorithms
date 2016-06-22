@@ -2,7 +2,7 @@
 // where you know in advance what the lowest and highest values are.
 
 let unsorted = [5,4,8,2,3,1,9,7,6];
-let sorted = [1,2,3,4,5,6,7,8,9]
+let sorted = [1,2,3,4,5,6,7,8,9];
 
 function onSearch(array, final = array.length, count = 0, looped = 0) {
   let swaps = 0;
