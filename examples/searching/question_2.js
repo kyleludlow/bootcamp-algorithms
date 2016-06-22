@@ -26,7 +26,9 @@ function eggDropper() {
     count++;
     flights++;
     if (lower === eggBreakage) {
-      return `The egg broke at floor ${eggBreakage} and therefore you can safely drop at floor ${lower - 1}.
+      // flight calcs are based on 2 flights of stairs per floor and 5 calories per flight...just cos 😃
+      return `
+The egg broke at floor ${eggBreakage} and therefore you can safely drop at floor ${lower - 1}.
 It took ${count} tries and you covered ${flights * 2} flights of stairs. That's about ${flights * 5} calories!
 `
     }
