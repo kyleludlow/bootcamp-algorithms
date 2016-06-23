@@ -51,4 +51,9 @@ let checker3 = 0;
 };
 
 
+let layWasteAgain = function (arr){
+
+}
+
+
 console.log(layWaste(twoDeeArray));
