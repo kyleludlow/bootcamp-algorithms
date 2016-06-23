@@ -23,5 +23,23 @@ let findGreatestSum = function(arr){
   };
 
 
+
+// Striving for that O(n)
+
+  let findGreatestSumAgain = function(arr){
+    let maxSum = -Infinity;
+    let tempSum = - Infinity;
+    for (let i = 0; i < arr.length; i++){
+
+          if (tempSum += arr[j] > tempSum){
+            tempSum += arr[j];
+          }
+          maxSum = Math.max(maxSum, tempSum);
+
+      }
+      return maxSum;
+    };
+
+
 // console.log(findGreatestSum(exampleArray));
 console.log(findGreatestSum(newArray));
