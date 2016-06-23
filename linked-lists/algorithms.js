@@ -19,6 +19,10 @@ LinkedList.prototype.insert = function(index, value) {
     }
     else {
         // Find the node which we want to insert after
+        // console.log('INDEX NUMBER',index);
+        // console.log('THE INDEX',this._find(index - 1));
+        // console.log(index - 1);
+        console.log(this._find(index - 1));
         var node = this._find(index - 1);
         newNode.next = node.next;
         node.next = newNode;
@@ -97,71 +101,89 @@ santasList.insert(10, null);
 // console.log(JSON.stringify(santasList, null, ' '));
 
 // easier, softer way
-var findMiddle2 = function(list) {
+// var reverseList = function(list) {
+// var newList = new LinkedList;
+//   var i = 0;
+//   var j = 0;
+//   while (list._find(i).next !== null){
+//     i++;
+//   }
+//   for (i; i>= 0; i--){
+//     newList.insert(j,list.get(i));
+//     j++;
+//   }
+// return newList;
+//
+// };
 
-  var i = 0;
-  var j = 0;
+// var findMiddle2 = function(list) {
+//
+//   var i = 0;
+//   var j = 0;
+//
+//   while (list._find(i).next !== null){
+//     i+=2;
+//     j+=1;
+//   }
+// console.log(j);
+// return list.get(j);
+// };
+//
+// // x x x x x
+// // 1 2 3 4 5 6 7 8 9 10
+// // y   y   y   y   y    ?
+//  console.log(findMiddle2(santasList));
+//
+//
+// var thirdFromLast = function(list) {
+//
+//   var i = 0;
+//   while (list._find(i).next !== null){
+//     i++;
+//   }
+//
+//   return list.get(i-3);
+// };
+//
+//
+// // console.log(thirdFromLast(santasList));
+//
+//
+//
+//
+// // console.log(reverseList(santasList));
+//
+//
+// var doesItCycle = function(list) {
+// var newList = new LinkedList;
+//   var i = 1;
+//   var j = 0;
+//   while (list._find(i).next !== null){
+//     if (list._find(i).next === list.get(j)){
+//       return true;
+//     }
+//     i++;
+//     j++;
+//
+//   }
+//   return false;
+// }
 
-  while (list._find(i).next !== null){
-    i+=2;
-    j+=1;
-  }
-console.log(j);
-return list.get(j);
-};
-
-// x x x x x
-// 1 2 3 4 5 6 7 8 9 10
-// y   y   y   y   y    ?
- console.log(findMiddle2(santasList));
-
-
-var thirdFromLast = function(list) {
-
-  var i = 0;
-  while (list._find(i).next !== null){
-    i++;
-  }
-
-  return list.get(i-3);
-};
-
-
-// console.log(thirdFromLast(santasList));
-
-
-var reverseList = function(list) {
-var newList = new LinkedList;
-  var i = 0;
-  var j = 0;
-  while (list._find(i).next !== null){
-    i++;
-  }
-  for (i; i>= 0; i--){
-    newList.insert(j,list.get(i));
-    j++;
-  }
-return newList;
-
-};
-
-
-// console.log(reverseList(santasList));
-
-
-var doesItCycle = function(list) {
-var newList = new LinkedList;
-  var i = 1;
-  var j = 0;
-  while (list._find(i).next !== null){
-    if (list._find(i).next === list.get(j)){
-      return true;
+var reverseList2 = function(list){
+    var i = 0;
+    var j = 0;
+    var newList = new LinkedList();
+    while(list._find(i).next !== null) {
+        i++
     }
-    i++;
-    j++;
-
-  }
-  return false;
+    for (i=i; i>= 0; i--) {
+        j++;
+        // console.log('WITHIN FOR LOOP',i);
+        // console.log('THIS IS A LIST ITEM',list._find(i));
+        newList.insert(j, list._find(i));
+    }
+    return newList;
 }
-
+console.log(reverseList2(santasList));
+//LinkedList.prototype.insert = function(index, value)
 // console.log(doesItCycle(santasList));
