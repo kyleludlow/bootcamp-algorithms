@@ -10,12 +10,9 @@ var matrix = [
 //             6,7,8
 function zeroItOut(array) {
     for (var x = 0; x < array.length; x++) {
-        if (array[x][0] === 0) {
-            var xCoord = array[x][0];
+        if (array[x][0] == 0) {
             for (var y = 0; y < array.length; y++) {
-                if (array[xCoord][y] == 0) {
-                    array[xCoord][y] == 0;
-                }
+                array[x][y] == 0;
             }
         }
     }
