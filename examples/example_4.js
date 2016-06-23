@@ -7,3 +7,7 @@ function nth(number, result = 0, start = 0) {
     return nth(number, result, start);
 }
 console.log(nth(3));
+
+0
+00
+000
