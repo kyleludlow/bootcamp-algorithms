@@ -5,7 +5,8 @@
 let exampleArray = [-1, 5, -2, 6, 2, 1, -10];
 
 
-let newArray = [-2,4,5,6,-20,11,1];
+// let newArray = [-2,4,5,6,-20,11,1];
+let newArray = [50, -2, 100];
 
 // O(n^2)
 
@@ -28,12 +29,16 @@ let findGreatestSum = function(arr){
 
   let findGreatestSumAgain = function(arr){
     let maxSum = -Infinity;
-    let tempSum = - Infinity;
+    let tempSum = 0;
     for (let i = 0; i < arr.length; i++){
 
-          if (tempSum += arr[j] > tempSum){
-            tempSum += arr[j];
+          if (tempSum + arr[i] > tempSum){
+            tempSum += arr[i];
+          } else if (tempSum + (arr[i] + arr[i+ 1]) > tempSum){
+            tempSum += arr[i];
           }
+
+          console.log(tempSum);
           maxSum = Math.max(maxSum, tempSum);
 
       }
@@ -42,4 +47,4 @@ let findGreatestSum = function(arr){
 
 
 // console.log(findGreatestSum(exampleArray));
-console.log(findGreatestSum(newArray));
+console.log(findGreatestSumAgain(newArray));
